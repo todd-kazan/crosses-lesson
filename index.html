@@ -19,7 +19,24 @@
     </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <button v-on:click="start">Начать заново</button>
+       <div v-if="winner" style="height:20px;">
+         <span>Победитель: </span>
+         <span v-text="out[player + 1]"></span>
+       </div>
+       <div v-else style="height:20px;">
+         <span>Ходит игрок: </span>
+         <span v-text="out[player + 1]"></span>
+         <span>, ход: </span>
+         <span v-text="turn + 1"></span>
+       </div>
+       <table border="1" cellspacing="0" rows="3" cols="3" width="302" eight="302" class="tic-tac-toe">
+         <tr v-for="i in 3">
+           <td v-for="j in 3" v-on:click="clk(i - 1, j - 1)" v-text="out[crosses[i - 1][j - 1] + 1]"></td>
+         </tr>
+       </table>
+    </div>
     <br/>
     <script src="https://unpkg.com/vue@latest/dist/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.1.0/jasmine.min.js"></script>
