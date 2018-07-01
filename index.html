@@ -19,8 +19,19 @@
     </style>
   </head>
   <body>
-    <div id="app"></div>
-    <br/>
+    <div id="app">
+    <div v-text="message">  
+      <!-- тут будет текст, который меняется, что то означает. Отчет статуса игры --> 
+    </div>
+
+    <table>
+      <tr>
+        <td> </td>
+      </tr>
+    </table>
+    </div>  <!-- html шаблон приложения -->
+    <br/>  <!-- перенос строки, чтобы не залезал на приложение -->
+    <!-- Подключаемые Библотеки из интернета -->
     <script src="https://unpkg.com/vue@latest/dist/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.1.0/jasmine.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.1.0/jasmine-html.min.js"></script>
