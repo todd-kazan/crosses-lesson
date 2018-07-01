@@ -1,3 +1,9 @@
 "use strict";
 
-var app
+var app = new Vue({
+  el: '#app',
+  data: 
+  {
+    message: 'Привет, Vue!'
+  }
+})
