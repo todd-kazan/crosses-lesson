@@ -1,6 +1,6 @@
 jasmine.getEnv().randomizeTests(false)
 
-xdescribe("Vue корректно инициализирован", function() {
+describe("Vue корректно инициализирован", function() {
   it("есть переменная app", function() {
     expect(app).toBeDefined()
   })
